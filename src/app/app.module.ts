@@ -8,14 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import { PageComponent } from './subscripcion_moviles/page/page.component';
+import { Registro_subscripcion_movilComponent } from './subscripcion_moviles/page/registro_subscripcion_movil.component';
+import {MatButtonModule} from "@angular/material/button";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    Registro_subscripcion_movilComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +26,7 @@ import { PageComponent } from './subscripcion_moviles/page/page.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
 
 
   ],
