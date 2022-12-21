@@ -1,0 +1,11 @@
+{
+  "mobileSubscriptions":[
+    {
+      "id": 1,
+      "month": "2017-10",
+      "networkAccess": "2G",
+      "typeOfPlan": "post-paid",
+      "numberOfSubscriptions": 0
+    }
+  ]
+}
