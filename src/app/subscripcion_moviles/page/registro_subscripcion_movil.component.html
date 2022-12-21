@@ -1,7 +1,8 @@
 <!-- MONTH, NETWORK ACCESS TECHNOLOGY, TYPE OF PLAN, NUMBER OF SUBSCRIPTIONS (SUBSCRIPTIONS)-->
+<br><br>
 <form [formGroup]="registrarFormulario" (ngSubmit)="agregar(registrarFormulario.value)">
-  <h1>Total de subscripciones de telefonos moviles</h1>
-  <div>
+  <h1 class="title">Total de subscripciones de telefonos moviles</h1><br>
+  <div class="formulario__primero">
     <mat-form-field appearance="fill">
       <mat-label>Mes</mat-label>
       <input matInput type="text" formControlName="mes" placeholder="02, 12, 10">
@@ -11,7 +12,9 @@
       <mat-label>Tecnología de acceso a la red</mat-label>
       <input matInput type="text" formControlName="red">
     </mat-form-field>
+  </div>
 
+  <div class="formulario__segundo">
     <mat-form-field appearance="fill">
       <mat-label>Tipo de plan</mat-label>
       <input matInput type="text" formControlName="plan">
@@ -23,9 +26,9 @@
     </mat-form-field>
   </div>
 
-  <div>
-    <button mat-raised-button type="submit">Save</button>
-    <button mat-raised-button type="reset">Cancel</button>
+  <div class="formulario__acciones">
+    <button mat-raised-button type="submit" color="primary">Save</button>
+    <button mat-raised-button type="reset" color="warn">Cancel</button>
   </div>
 </form>
 

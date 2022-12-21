@@ -3,7 +3,7 @@ import {FormGroup} from "@angular/forms";
 import {Subscripcion_movil} from "../model/subscripcion_movil";
 
 @Component({
-  selector: 'app-page',
+  selector: 'registro_subscripcion_movil',
   templateUrl: './registro_subscripcion_movil.component.html',
   styleUrls: ['./registro_subscripcion_movil.component.css']
 })

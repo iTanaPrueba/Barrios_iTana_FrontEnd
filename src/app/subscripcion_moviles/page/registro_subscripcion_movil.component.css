@@ -1,0 +1,25 @@
+.title{
+  font-size: 30px;
+  text-align: center;
+  font-family: "Comic Sans MS";
+}
+.formulario__primero{
+  display: flex;
+  justify-content: space-evenly;
+}
+.formulario__segundo{
+  display: flex;
+  justify-content: space-evenly;
+}
+.formulario__acciones{
+  display: flex;
+  justify-content: center;
+}
+
+/* CAMBIOS GLOBALES */
+button{
+  margin: 10px;
+}
+mat-form-field{
+  width: 400px;
+}
