@@ -11,6 +11,7 @@ import {MatInputModule} from "@angular/material/input";
 import { Registro_subscripcion_movilComponent } from './subscripcion_moviles/page/registro_subscripcion_movil.component';
 import {MatButtonModule} from "@angular/material/button";
 import { TableComponent } from './components/table/table.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -20,18 +21,19 @@ import { TableComponent } from './components/table/table.component';
     Registro_subscripcion_movilComponent,
     TableComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
 
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
 
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

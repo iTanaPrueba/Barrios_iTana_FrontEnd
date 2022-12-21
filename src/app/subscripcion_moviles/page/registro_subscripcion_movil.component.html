@@ -10,14 +10,25 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Tecnología de acceso a la red</mat-label>
-      <input matInput type="text" formControlName="red">
+      <mat-select formControlName="red">
+        <mat-option> </mat-option>
+        <mat-option>1G</mat-option>
+        <mat-option>2G</mat-option>
+        <mat-option>3G</mat-option>
+        <mat-option>4G</mat-option>
+        <mat-option>5G</mat-option>
+      </mat-select>
     </mat-form-field>
   </div>
 
   <div class="formulario__segundo">
     <mat-form-field appearance="fill">
       <mat-label>Tipo de plan</mat-label>
-      <input matInput type="text" formControlName="plan">
+      <mat-select formControlName="plan">
+        <mat-option> </mat-option>
+        <mat-option>post-paid</mat-option>
+        <mat-option>pre-paid</mat-option>
+      </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">

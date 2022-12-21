@@ -23,3 +23,7 @@ button{
 mat-form-field{
   width: 400px;
 }
+mat-option{
+  text-align: center;
+  font-weight: inherit;
+}
