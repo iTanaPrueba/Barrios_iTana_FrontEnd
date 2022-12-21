@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import { Registro_subscripcion_movilComponent } from './subscripcion_moviles/page/registro_subscripcion_movil.component';
+import { Register_mobile_subscriptionComponent } from './subscripcion_moviles/page/register_mobile_subscription.component';
 import {MatButtonModule} from "@angular/material/button";
 import { TableComponent } from './components/table/table.component';
 import {MatSelectModule} from "@angular/material/select";
@@ -18,7 +18,7 @@ import {MatSelectModule} from "@angular/material/select";
 @NgModule({
   declarations: [
     AppComponent,
-    Registro_subscripcion_movilComponent,
+    Register_mobile_subscriptionComponent,
     TableComponent
   ],
     imports: [

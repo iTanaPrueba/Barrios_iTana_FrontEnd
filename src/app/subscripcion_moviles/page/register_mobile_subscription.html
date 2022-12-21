@@ -1,8 +1,8 @@
 <!-- MONTH, NETWORK ACCESS TECHNOLOGY, TYPE OF PLAN, NUMBER OF SUBSCRIPTIONS (SUBSCRIPTIONS)-->
 <br><br>
-<form [formGroup]="registrarFormulario" (ngSubmit)="agregar(registrarFormulario.value)">
-  <h1 class="title">Total de subscripciones de telefonos moviles</h1><br>
-  <div class="formulario__primero">
+<h1 class="title">Total de subscripciones de telefonos moviles</h1><br>
+<form [formGroup]="registerForm" (ngSubmit)="add(registerForm.value)">
+  <div class="form__first">
     <mat-form-field appearance="fill">
       <mat-label>Mes</mat-label>
       <input matInput type="text" formControlName="mes" placeholder="02, 12, 10">
@@ -10,24 +10,24 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Tecnología de acceso a la red</mat-label>
-      <mat-select formControlName="red">
-        <mat-option> </mat-option>
-        <mat-option>1G</mat-option>
-        <mat-option>2G</mat-option>
-        <mat-option>3G</mat-option>
-        <mat-option>4G</mat-option>
-        <mat-option>5G</mat-option>
+      <mat-select formControlName="red" [(value)]="redValue">
+        <mat-option value=" "> </mat-option>
+        <mat-option value="1G">1G</mat-option>
+        <mat-option value="2G">2G</mat-option>
+        <mat-option value="3G">3G</mat-option>
+        <mat-option value="4G">4G</mat-option>
+        <mat-option value="5G">5G</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 
-  <div class="formulario__segundo">
+  <div class="form__second">
     <mat-form-field appearance="fill">
       <mat-label>Tipo de plan</mat-label>
-      <mat-select formControlName="plan">
+      <mat-select formControlName="plan" [(value)]="planValue">
         <mat-option> </mat-option>
-        <mat-option>post-paid</mat-option>
-        <mat-option>pre-paid</mat-option>
+        <mat-option value="post-paid">post-paid</mat-option>
+        <mat-option value="pre-paid">pre-paid</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -37,7 +37,7 @@
     </mat-form-field>
   </div>
 
-  <div class="formulario__acciones">
+  <div class="form__action">
     <button mat-raised-button type="submit" color="primary">Save</button>
     <button mat-raised-button type="reset" color="warn">Cancel</button>
   </div>

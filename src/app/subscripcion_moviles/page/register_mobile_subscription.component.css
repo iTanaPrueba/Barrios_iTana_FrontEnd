@@ -3,20 +3,20 @@
   text-align: center;
   font-family: "Comic Sans MS";
 }
-.formulario__primero{
+.form__first{
   display: flex;
   justify-content: space-evenly;
 }
-.formulario__segundo{
+.form__second{
   display: flex;
   justify-content: space-evenly;
 }
-.formulario__acciones{
+.form__action{
   display: flex;
   justify-content: center;
 }
 
-/* CAMBIOS GLOBALES */
+/* GLOBAL CHANCE */
 button{
   margin: 10px;
 }
