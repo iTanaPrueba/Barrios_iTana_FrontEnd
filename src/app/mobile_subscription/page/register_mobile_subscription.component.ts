@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {mobileSubscriptions} from "../model/mobile_subscription";
 
 @Component({
@@ -19,4 +19,12 @@ export class Register_mobile_subscriptionComponent implements OnInit {
 
   }
 
+  constructor(private formBuilder: FormBuilder){
+    this.registerForm = this.formBuilder.group({
+      month: new FormControl('', [Validators.required, Validators.pattern(/^((0[1-9])|(1[0-2]))$/)]),
+      network: new FormControl('', [Validators.required]),
+      plan: new FormControl('', [Validators.required]),
+      subscriptions: new FormControl('', [Validators.required, Validators.pattern(/^([0-9]+)$/)])
+    })
+  }
 }
