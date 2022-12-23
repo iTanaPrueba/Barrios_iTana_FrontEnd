@@ -26,4 +26,13 @@ export class MobileSubscriptionService {
         })
       )
   }
+
+  putMobileDescription(data:any, id:number){
+    return this.http.put<any>(this.basePath + 'mobileSubscriptions/' + id, data)
+      .pipe(
+        tap(() => {
+          this._refresh.next()
+        })
+      )
+  }
 }

@@ -1,7 +1,7 @@
 <!-- MONTH, NETWORK ACCESS TECHNOLOGY, TYPE OF PLAN, NUMBER OF SUBSCRIPTIONS (SUBSCRIPTIONS)-->
 <br><br>
 <h1 class="title">Total de subscripciones de telefonos moviles</h1><br>
-<form [formGroup]="registerForm" (ngSubmit)="add(registerForm.value)">
+<form [formGroup]="registerForm" (ngSubmit)="addMobileSubscription(registerForm.value)">
   <div class="form__first">
     <mat-form-field appearance="fill">
       <mat-label>Mes</mat-label>
@@ -36,12 +36,14 @@
   </div>
 
   <div class="form__action">
-    <button mat-raised-button type="submit" [disabled]="!registerForm.valid" color="primary">Save</button>
+    <button *ngIf="!_updateDataConfirm" mat-raised-button type="submit" [disabled]="!registerForm.valid" color="primary">Save</button>
+    <button *ngIf="_updateDataConfirm" mat-raised-button [disabled]="!registerForm.valid" color="primary">UPDATE</button>
     <button mat-raised-button type="reset" color="warn">Reset</button>
+    <button *ngIf="_updateDataConfirm" mat-raised-button type="reset" color="accent" (click)="cancelUpdate()">CANCEL</button>
   </div>
 </form>
 
 <br><br>
 
-<app-table></app-table>
+<app-table (mobileSubscriptionData)="updateMobileSubscription($event, $event)" ></app-table>
 

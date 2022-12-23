@@ -1,23 +1,31 @@
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort>
+  <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="Month">
-      <th class="table__header" mat-header-cell *matHeaderCellDef mat-sort-header>Month</th>
+      <th class="table__header" mat-header-cell *matHeaderCellDef>Month</th>
       <td mat-cell *matCellDef="let row">{{row.month}}</td>
     </ng-container>
 
     <ng-container matColumnDef="Network access technology">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Network access technology</th>
+      <th mat-header-cell *matHeaderCellDef>Network access technology</th>
       <td mat-cell *matCellDef="let row">{{row.network}}</td>
     </ng-container>
 
     <ng-container matColumnDef="Type of plan">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Type of plan</th>
+      <th mat-header-cell *matHeaderCellDef>Type of plan</th>
       <td mat-cell *matCellDef="let row">{{row.plan}}</td>
     </ng-container>
 
     <ng-container matColumnDef="Number of subscriptions (Subscriptions)">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Number of subscriptions (Subscriptions)</th>
+      <th mat-header-cell *matHeaderCellDef>Number of subscriptions (Subscriptions)</th>
       <td mat-cell *matCellDef="let row">{{row.subscriptions}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="putMobileDescription(row, true)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button><mat-icon>delete</mat-icon></button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="columns"></tr>
