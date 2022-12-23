@@ -10,7 +10,7 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Tecnología de acceso a la red</mat-label>
-      <mat-select formControlName="network" [(value)]="redValue">
+      <mat-select formControlName="network">
         <mat-option value="1G">1G</mat-option>
         <mat-option value="2G">2G</mat-option>
         <mat-option value="3G">3G</mat-option>
@@ -23,7 +23,7 @@
   <div class="form__second">
     <mat-form-field appearance="fill">
       <mat-label>Tipo de plan</mat-label>
-      <mat-select formControlName="plan" [(value)]="planValue">
+      <mat-select formControlName="plan">
         <mat-option value="post-paid">post-paid</mat-option>
         <mat-option value="pre-paid">pre-paid</mat-option>
       </mat-select>
@@ -40,4 +40,8 @@
     <button mat-raised-button type="reset" color="warn">Reset</button>
   </div>
 </form>
+
+<br><br>
+
+<app-table></app-table>
 

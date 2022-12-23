@@ -15,6 +15,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {HttpClientModule} from "@angular/common/http";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -36,7 +38,9 @@ export function HttpLoaderFactory(http: HttpClient){
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        HttpClientModule
+        HttpClientModule,
+        MatTableModule,
+        MatSortModule
 
     ],
   providers: [],
