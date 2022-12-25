@@ -30,14 +30,15 @@ export class MobileSubscriptionService {
       )
   }
 
-  putMobileDescription(data:mobileSubscriptions, id:number){
-    return this.http.put<mobileSubscriptions>(this.APIREST + '/' + id, data)
+  putMobileSubscription(data:mobileSubscriptions, id:number){
+    return this.http.put<mobileSubscriptions>(this.APIREST + '/' + id + '?month=' + data.month + '&network=' + data.network + '&plan=' + data.plan + '&subscriptions=' + data.subscriptions, data)
       .pipe(
         tap(() => {
           this._refresh.next()
         })
       )
   }
+  //http://localhost:8080/api/v1/mobileSubscription/5?month=string&network=string&plan=string&subscriptions=0
 
   deleteMobileSubscription(id: number){
     return this.http.delete<mobileSubscriptions>(this.APIREST + '/' + id)
