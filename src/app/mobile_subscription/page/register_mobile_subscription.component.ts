@@ -28,7 +28,9 @@ export class Register_mobile_subscriptionComponent implements OnInit {
 
   addMobileSubscription(form: mobileSubscriptions) {
     if (this._updateDataConfirm) {
-      this.mobileSubscriptionService.putMobileSubscription(form, this.idMobileSubscription).subscribe()
+      this.mobileSubscriptionService.putMobileSubscription(form, this.idMobileSubscription).subscribe(data => {
+        console.log(data)
+      })
       this.registerForm.reset()
       this._updateDataConfirm = false
     } else {
