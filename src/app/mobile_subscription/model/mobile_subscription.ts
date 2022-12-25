@@ -1,8 +1,7 @@
 export interface mobileSubscriptions{
   id: number;
-  month: number;
+  month: string;
   network: string;
   plan: string;
   subscriptions: number;
-
 }

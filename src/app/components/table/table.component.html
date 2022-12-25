@@ -23,8 +23,8 @@
     <ng-container matColumnDef="Actions">
       <th mat-header-cell *matHeaderCellDef>Action</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button (click)="putMobileDescription(row, true)"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button (click)="putMobileDescription(row)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button (click)="deleteMobilSubscription(row.id)"><mat-icon>delete</mat-icon></button>
       </td>
     </ng-container>
 

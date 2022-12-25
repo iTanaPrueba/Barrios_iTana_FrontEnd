@@ -41,14 +41,14 @@ export class Register_mobile_subscriptionComponent implements OnInit {
     }
   }
 
-  updateMobileSubscription(newData: any, update: boolean) {
+  updateMobileSubscription(newData: any) {
     this.registerForm = this.formBuilder.group({
       month: new FormControl(newData.month, [Validators.required, Validators.pattern(/^((0[1-9])|(1[0-2]))$/)]),
       network: new FormControl(newData.network, [Validators.required]),
       plan: new FormControl(newData.plan, [Validators.required]),
       subscriptions: new FormControl(newData.subscriptions, [Validators.required, Validators.pattern(/^([0-9]+)$/)])
     })
-    this._updateDataConfirm = update
+    this._updateDataConfirm = true;
     this.idMobileSubscription = newData.id
   }
 

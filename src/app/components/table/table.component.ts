@@ -4,6 +4,7 @@ import {MobileSubscriptionService} from "../../mobile_subscription/service/mobil
 import {MatPaginator} from "@angular/material/paginator";
 import {Subscription} from "rxjs";
 import {MatSort, Sort} from "@angular/material/sort";
+import {mobileSubscriptions} from "../../mobile_subscription/model/mobile_subscription";
 
 @Component({
   selector: 'app-table',
@@ -16,7 +17,6 @@ export class TableComponent implements OnInit {
   refresh!: Subscription
 
   @Output() mobileSubscriptionData = new EventEmitter;
-  @Output() updateData = new EventEmitter;
   constructor(private api:MobileSubscriptionService) { }
 
   ngOnInit() {
@@ -29,15 +29,20 @@ export class TableComponent implements OnInit {
   }
 
   getAllMobileSubscription(){
-    this.api.getAllMobileSubscription().subscribe({
-      next: response =>{
-        this.dataSource = new MatTableDataSource(response);
-      }
+    this.api.getAllMobileSubscription().subscribe((response)=> {
+      this.dataSource = new MatTableDataSource(response);
     })
   }
 
-  putMobileDescription(row: any, update: boolean){
+  putMobileDescription(row: mobileSubscriptions){
     this.mobileSubscriptionData.emit(row)
-    this.updateData.emit(update)
+  }
+
+  deleteMobilSubscription(id: number){
+    this.api.deleteMobileSubscription(id).subscribe({
+      next: response =>{
+        console.log(response)
+      }
+    })
   }
 }
