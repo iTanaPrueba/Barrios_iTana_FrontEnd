@@ -1,9 +1,7 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MobileSubscriptionService} from "../../mobile_subscription/service/mobile-subscription.service";
-import {MatPaginator} from "@angular/material/paginator";
 import {Subscription} from "rxjs";
-import {MatSort, Sort} from "@angular/material/sort";
 import {mobileSubscriptions} from "../../mobile_subscription/model/mobile_subscription";
 
 @Component({

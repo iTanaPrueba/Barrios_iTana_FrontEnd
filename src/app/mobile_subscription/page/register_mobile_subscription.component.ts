@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {mobileSubscriptions} from "../model/mobile_subscription";
 import {MobileSubscriptionService} from "../service/mobile-subscription.service";
@@ -28,9 +28,7 @@ export class Register_mobile_subscriptionComponent implements OnInit {
 
   addMobileSubscription(form: mobileSubscriptions) {
     if (this._updateDataConfirm) {
-      this.mobileSubscriptionService.putMobileSubscription(form, this.idMobileSubscription).subscribe(data => {
-        console.log(data)
-      })
+      this.mobileSubscriptionService.putMobileSubscription(form, this.idMobileSubscription).subscribe()
       this.registerForm.reset()
       this._updateDataConfirm = false
     } else {

@@ -9,7 +9,6 @@ import {mobileSubscriptions} from "../model/mobile_subscription";
 })
 export class MobileSubscriptionService {
   APIREST = environment.mobileBaseAPI;
-  basePath = 'http://localhost:3000/';
   constructor(private http: HttpClient) { }
 
   private _refresh = new Subject<void>();
@@ -38,7 +37,6 @@ export class MobileSubscriptionService {
         })
       )
   }
-  //http://localhost:8080/api/v1/mobileSubscription/5?month=string&network=string&plan=string&subscriptions=0
 
   deleteMobileSubscription(id: number){
     return this.http.delete<mobileSubscriptions>(this.APIREST + '/' + id)
