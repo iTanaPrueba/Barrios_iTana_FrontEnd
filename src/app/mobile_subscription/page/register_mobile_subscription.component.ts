@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {mobileSubscriptions} from "../model/mobile_subscription";
 import {MobileSubscriptionService} from "../service/mobile-subscription.service";
-import {DatePipe} from "@angular/common";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'register_mobile_subscription',
@@ -17,13 +17,17 @@ export class Register_mobile_subscriptionComponent implements OnInit {
 
   }
 
-  constructor(private formBuilder: FormBuilder, public mobileSubscriptionService: MobileSubscriptionService) {
+  constructor(private formBuilder: FormBuilder, public mobileSubscriptionService: MobileSubscriptionService, public translate: TranslateService) {
     this.registerForm = this.formBuilder.group({
       month: new FormControl('', [Validators.required, Validators.pattern(/^(2([0-9]{3})-((0[1-9])|(1[0-2])))$/)]),
       network: new FormControl('', [Validators.required]),
       plan: new FormControl('', [Validators.required]),
       subscriptions: new FormControl('', [Validators.required, Validators.pattern(/^([0-9]+)$/)])
     })
+
+
+    translate.addLangs(['english', 'spanish']);
+    translate.setDefaultLang('english')
   }
 
   registerForm!: FormGroup;
@@ -57,5 +61,9 @@ export class Register_mobile_subscriptionComponent implements OnInit {
   cancelUpdate() {
     this.registerForm.reset()
     this._updateDataConfirm = false
+  }
+
+  changeLanguage(language: string): void{
+    this.translate.use(language);
   }
 }

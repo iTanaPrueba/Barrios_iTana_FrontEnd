@@ -1,0 +1,12 @@
+{
+  "title": "Total de subscripciones de teléfonos móviles",
+  "form": {
+    "month": "Mes",
+    "network": "Tecnología de acceso a la red",
+    "plan": "Tipo de plan",
+    "subscriptions": "Números de subscripciones (Subscripciones)"
+  },
+  "table": {
+    "actions":"Acciones"
+  }
+}

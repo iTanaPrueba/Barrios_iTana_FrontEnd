@@ -18,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatIconModule} from "@angular/material/icon";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -43,7 +44,15 @@ export function HttpLoaderFactory(http: HttpClient){
     MatTableModule,
     MatSortModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+
+    TranslateModule.forRoot({
+      loader:{
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [],

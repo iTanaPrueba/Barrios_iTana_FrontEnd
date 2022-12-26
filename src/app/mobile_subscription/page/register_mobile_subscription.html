@@ -1,14 +1,19 @@
-<br><br>
-<h1 class="title">Total de subscripciones de telefonos moviles</h1><br>
+<br>
+<div>
+  <button mat-button (click)="changeLanguage('english')">English</button>
+  <button mat-button (click)="changeLanguage('spanish')">Spanish</button>
+</div>
+
+<h1 class="title">{{"title" | translate}}</h1><br>
 <form [formGroup]="registerForm" (ngSubmit)="addMobileSubscription(registerForm.value)">
   <div class="form__first">
     <mat-form-field appearance="fill">
-      <mat-label>Mes</mat-label>
-      <input matInput type="text" formControlName="month" placeholder="02, 12, 10">
+      <mat-label>{{"form.month" | translate}}</mat-label>
+      <input matInput type="text" formControlName="month" placeholder="2022-02, 2022-12, 2022-10">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Tecnología de acceso a la red</mat-label>
+      <mat-label>{{"form.network" | translate}}</mat-label>
       <mat-select formControlName="network">
         <mat-option value="1G">1G</mat-option>
         <mat-option value="2G">2G</mat-option>
@@ -21,7 +26,7 @@
 
   <div class="form__second">
     <mat-form-field appearance="fill">
-      <mat-label>Tipo de plan</mat-label>
+      <mat-label>{{"form.plan" | translate}}</mat-label>
       <mat-select formControlName="plan">
         <mat-option value="post-paid">post-paid</mat-option>
         <mat-option value="pre-paid">pre-paid</mat-option>
@@ -29,7 +34,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Números de subscripciones (Subscripciones)</mat-label>
+      <mat-label>{{"form.subscriptions" | translate}}</mat-label>
       <input matInput type="text" formControlName="subscriptions" placeholder="0, 654, 1679800">
     </mat-form-field>
   </div>

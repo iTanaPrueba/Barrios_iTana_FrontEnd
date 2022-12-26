@@ -1,0 +1,12 @@
+{
+  "title": "Total Mobile Phone Subscriptions",
+  "form": {
+    "month": "Month",
+    "network": "Network access technology",
+    "plan": "Type of plan",
+    "subscriptions": "Number of subscriptions (Subscriptions)"
+  },
+  "table": {
+    "actions":"Actions"
+  }
+}
